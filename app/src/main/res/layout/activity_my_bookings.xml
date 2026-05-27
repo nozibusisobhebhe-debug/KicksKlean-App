@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBookings"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000000"
+        app:titleTextColor="#FFD600"
+        app:title="My Bookings" />
+
+    <ListView
+        android:id="@+id/lvBookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/tvNoBookings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No saved bookings yet.\n\nMake a booking first!"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

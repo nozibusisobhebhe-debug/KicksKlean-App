@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#000000"
+    android:padding="24dp">
+
+    <!-- YOUR LOGO IMAGE (Replace the shoe emoji with this) -->
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/kicksklean"
+        android:contentDescription="KicksKlean Logo"
+        android:layout_marginBottom="16dp" />
+
+    <!-- App Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KICKSKLEAN"
+        android:textSize="36sp"
+        android:textColor="#FFD600"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Slogan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kick clean your premium shoe cleaning service"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="48dp" />
+
+    <!-- Booking Button -->
+    <Button
+        android:id="@+id/btnStartBooking"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="BOOK NOW"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="#FFD600"
+        android:textColor="#000000" />
+
+</LinearLayout>

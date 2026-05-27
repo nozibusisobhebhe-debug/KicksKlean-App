@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000000"
+        app:titleTextColor="#FFD600"
+        app:title="Bluetooth Transfer" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Status TextView -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ready"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="#F5F5F5"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Booking Info Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📋 Booking to Transfer"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Booking Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:id="@+id/tvBookingInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Loading booking details..."
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:fontFamily="monospace" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Enable Bluetooth Button -->
+            <Button
+                android:id="@+id/btnEnableBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:text="🔵 Enable Bluetooth"
+                android:backgroundTint="#000000"
+                android:textColor="#FFD600"
+                android:textStyle="bold" />
+
+            <!-- Discover Devices Button -->
+            <Button
+                android:id="@+id/btnDiscoverDevices"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:text="🔍 Discover Devices"
+                android:backgroundTint="#333333"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+            <!-- Devices List Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Devices"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Devices ListView -->
+            <ListView
+                android:id="@+id/lvDevices"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="16dp"
+                android:background="#F5F5F5" />
+
+            <!-- Transfer Buttons Row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <!-- Send Booking Button -->
+                <Button
+                    android:id="@+id/btnSendBooking"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="📤 Send Booking"
+                    android:backgroundTint="#FFD600"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <!-- Receive Booking Button -->
+                <Button
+                    android:id="@+id/btnReceiveBooking"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    android:layout_marginStart="8dp"
+                    android:text="📡 Receive"
+                    android:backgroundTint="#000000"
+                    android:textColor="#FFD600"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Back to Home Button -->
+            <Button
+                android:id="@+id/btnBackToHome"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🏠 Back to Home"
+                android:backgroundTint="#CCCCCC"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
